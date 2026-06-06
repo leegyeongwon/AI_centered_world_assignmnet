@@ -230,7 +230,7 @@ async function fetchTodayQuiz() {
         
         // 데이터는 뒤에서 계속 모으되, 화면(textContent)에는 뿌리지 않고 가만히 둡니다.
         accumulatedText = currentProgressText; 
-      } catch (e) {
+      } catch {
         // 불완전한 chunk 처리용 예외 처리
       }
     }
@@ -248,7 +248,7 @@ async function fetchTodayQuiz() {
           }
         });
         if (finalProgressText) accumulatedText = finalProgressText;
-      } catch(e) {}
+      } catch {}
     }
 
     // 타이머 종료 및 로딩 인터벌 정리
