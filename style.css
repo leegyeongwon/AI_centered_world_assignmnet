@@ -139,9 +139,21 @@ select, input {
 .calendar-nav-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 15px;
   gap: 10px;
+}
+
+.calendar-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.calendar-btn-row {
+  display: flex;
+  gap: 4px;
 }
 
 .calendar-btn-group button {
