@@ -1,12 +1,17 @@
 const CACHE_NAME = 'ai-code-note-v1';
-// 캐싱할 파일 목록 (경로에 맞게 수정 가능)
+
+// ⚠️ 중요: 자신의 깃허브 저장소(Repository) 이름을 꼭 적어주세요!
+// 예: 주소가 https://gildong.github.io/my-quiz-app/ 이라면 저장소 이름은 'my-quiz-app' 입니다.
+const REPO_NAME = '/AI_centered_world_assignmnet'; 
+
 const FILES_TO_CACHE = [
-  './index.html',
-  './style.css',
-  './script.js',
-  './manifest.json',
-  './icon-192.png',
-  './icon-512.png'
+  `${REPO_NAME}/`,
+  `${REPO_NAME}/index.html`,
+  `${REPO_NAME}/style.css`,
+  `${REPO_NAME}/script.js`,
+  `${REPO_NAME}/manifest.json`,
+  `${REPO_NAME}/icon-192.png`,
+  `${REPO_NAME}/icon-512.png`
 ];
 
 // 서비스 워커 설치 및 파일 캐싱
