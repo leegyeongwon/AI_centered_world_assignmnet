@@ -66,12 +66,15 @@ select, input {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 15px;
-  white-space: pre-wrap;
   background-color: #1d1f21;
   color: #c5c8c6;
   padding: 15px;
   border-radius: 8px;
   line-height: 1.6;
+  
+  /* [추가] 가로 스크롤 대신 모바일/PC 통합 자동 줄바꿈 */
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .quiz-question pre[class*="language-"] {
@@ -81,6 +84,11 @@ select, input {
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
   font-size: 14px;
   background: #2d2d2d !important;
+  
+  /* [수정] 강제 가로 스크롤 해제 및 자동 들여쓰기 줄바꿈 매칭 */
+  white-space: pre-wrap !important;
+  word-break: break-all !important;
+  overflow-x: visible !important; 
 }
 
 .quiz-options {
@@ -116,6 +124,7 @@ select, input {
   color: #4a5568;
   line-height: 1.6;
   white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .answer-highlight {
@@ -434,8 +443,10 @@ button:hover { background-color: #45a049; }
 
 /* 📱 모바일 디바이스 최적화 미디어 쿼리 */
 @media (max-width: 600px) {
-  body { padding: 10px; }
-  .container { padding: 15px; }
+  /* [수정] 모바일 화면 좌우 낭비되는 패딩 최소화하여 코드창 확보 */
+  body { padding: 4px; }
+  .container { padding: 10px; border-radius: 8px; }
+  .quiz-area { padding: 10px; border-radius: 6px; }
 
   .settings-row {
     flex-direction: column;
