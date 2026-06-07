@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ai-code-note-v5';
+const CACHE_NAME = 'ai-code-note-v6';
 
 // 앞뒤 슬래시를 제외한 순수 저장소 이름만 적는 것이 경로 꼬임을 방지하기 좋습니다.
 const REPO_NAME = 'AI_centered_world_assignmnet'; 
